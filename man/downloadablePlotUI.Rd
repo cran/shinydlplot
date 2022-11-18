@@ -8,7 +8,8 @@ downloadablePlotUI(
   id,
   title = "Download plot data",
   width = "100\%",
-  height = "400px"
+  height = "400px",
+  zoom = FALSE
 )
 }
 \arguments{
@@ -16,7 +17,7 @@ downloadablePlotUI(
 
 \item{title}{Text to display on hover of download button.}
 
-\item{width}{Image width/height. Must be a valid CSS unit (like
+\item{width, height}{Image width/height. Must be a valid CSS unit (like
 \code{"100\%"}, \code{"400px"}, \code{"auto"}) or a number, which will be
 coerced to a string and have \code{"px"} appended. These two arguments are
 ignored when \code{inline = TRUE}, in which case the width/height of a plot
@@ -24,13 +25,7 @@ must be specified in \code{renderPlot()}. Note that, for height, using
 \code{"auto"} or \code{"100\%"} generally will not work as expected,
 because of how height is computed with HTML/CSS.}
 
-\item{height}{Image width/height. Must be a valid CSS unit (like
-\code{"100\%"}, \code{"400px"}, \code{"auto"}) or a number, which will be
-coerced to a string and have \code{"px"} appended. These two arguments are
-ignored when \code{inline = TRUE}, in which case the width/height of a plot
-must be specified in \code{renderPlot()}. Note that, for height, using
-\code{"auto"} or \code{"100\%"} generally will not work as expected,
-because of how height is computed with HTML/CSS.}
+\item{zoom}{if \code{TRUE} brush then double-click to zoom.}
 }
 \value{
 an HTML tag object corresponding to the UI for \code{downloadablePlot}.
